@@ -1,0 +1,119 @@
+<html>
+<head>
+<title>WEBSITE 2</TITLE>
+<style>
+
+body{
+background-image:url("https://img.freepik.com/free-photo/vegetables-set-left-black-slate_1220-685.jpg");
+background-repeat:no-repeat;
+background-size:cover;
+background-position:center;
+height:100%;
+}
+
+fieldset{
+height:200px;
+width:200px;
+color:white;
+position: absolute;
+top: 200px;
+right: 650px;
+width: 400px;
+}
+
+table{
+color:white;
+font-style:italic;
+}
+
+#i1{
+position: absolute;
+top: 650px;
+right: 250px;
+width: 150px;
+border-radius: 12px;
+background-color: white;
+color:#430E47;
+border: 2px solid #850E07;
+
+}
+
+#i2{
+position: absolute;
+top: 700px;
+right: 250px;
+width: 150px;
+border-radius: 12px;
+background-color: white;
+color:#430E47;
+border: 2px solid #850E07;
+}
+
+</style>
+
+
+<script>
+function validation(){
+var a=document.myform.pw.value;
+var b=document.myform.rpw.value;
+var c=a.length;
+var d=document.myform.mn.value;
+var n=d.length;
+if(a!=b){
+alert("Enter the same password");
+return false;
+}
+else{
+if(c<6){
+alert("Password should be atleast 6 characters");
+return false;
+}
+}
+if(isNaN(d)){
+alert("Enter only digits");
+return false;
+}
+else{
+return true;
+}
+}
+</script>
+
+
+</head>
+<body>
+
+<fieldset>
+<legend>Sign Up</legend>
+
+<form name="myform" action="page.java" onsubmit="return validation()">
+
+<table>
+
+<tr><td>FIRST NAME:</td><td><input type="text" name="un" required></td></tr>
+<tr><td></td><td></td></tr>
+
+<tr><td>EMAIL-ID:</td><td><input type="text" name="em" required></td></tr>
+<tr><td></td><td></td></tr>
+
+<tr><td>PASSWORD:</td><td><input type="password" name="pw" required></td></tr>
+<tr><td></td><td></td></tr>
+
+<tr><td>RETYPE-PASSWORD:</td><td><input type="password" name="rpw" required></td></tr>
+<tr><td></td><td></td></tr>
+
+<tr><td>MOBILE NUMBER:</td><td><input type="text" name="mn" required></td></tr>
+<tr><td></td><td></td></tr>
+
+<tr><td><input type="submit" name="button" value="SUBMIT"></td><td></td></tr>
+
+</table>
+</form>
+</fieldset>
+
+
+<a href="web3.html"><input id="i1" type="submit" name="button" value="NEXTPAGE"></a>
+<a href="web1.html"><input  id="i2"type="submit" name="button" value="PREVIOUS PAGE"></a>
+
+</body>
+</html>
